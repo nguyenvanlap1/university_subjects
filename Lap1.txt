@@ -1,0 +1,196 @@
+LAB 1
+CÀI ĐẶT HỆ ĐIỀU HÀNH VÀ PHẦN MỀM - SỬ DỤNG LỆNH CƠ BẢN
+
+Họ tên và MSSV: Nguyễn Văn Lập B2203509
+Nhóm học phần: 03
+
+-Các sinh viên bị phát hiện sao chép bài của nhau sẽ nhận 0đ cho tất cả bài thực hành của môn này.
+-Bài nộp phải ở dạng PDF, hình minh họa phải rõ ràng chi tiết. Hình minh hoạ chỉ cần chụp ở nội dung thực hiện, không chụp toàn màn hình.
+
+1.Sử dụng Linux 
+ 	Tìm hiểu và thực hiện các yêu cầu sau:
+1.1.Linux distribution (gọi tắt là distro) là gì? Giữa các distro giống và khác nhau thế nào?
+- Là một hệ điều hành hoàn chỉnh bao gồm Linux kernel, thư viện hệ thống (system libraries), tiện ích, phần mềm ứng dụng và hệ thống quản lý gói (package management system). Nó được tạo ra bằng cách lắp ráp nhiều thành phần phần mềm từ nhiều nguồn khác nhau và đóng gói chúng lại với nhau để cung cấp một môi trường điện toán gắn kết và thân thiện với người dùng.
+- Giống và khác nhau giữa các distro:
++ Giống:
+ Các bản Linux distro đều có Kernel và Linux.
+Các bản phân phối Linux tuân theo triết lý mã nguồn mở, cho phép người dùng tự do sử dụng, sửa đổi và phân phối lại phần mềm.
++ Khác: 
+Giữa các bản Linux distro khác nhau là đối tượng mục tiêu và hệ thống của chúng. Ví dụ, một số bản Linux distro được tùy chỉnh cho hệ thống máy tính để bàn, một số bản Linux distro tùy chỉnh cho hệ thống máy chủ và một sôs bản được tùy chỉnh cho máy cũ.
+Sự khác biệt lớn thứ hai giữa các bản distro là quá trình cài đặt và cập nhật ứng dụng. Các bản distro khác nhau sử dụng các công cụ cài đặt và quản lý ứng dụng khác nhau, được gọi là công cụ quản lý gói.(package management tools.)
+Sự khác biệt lớn tiếp theo là cách các bản distro cung cấp hỗ trợ và cập nhật. Một số bản distro được duy trì bởi một cộng đồng tình nguyện viên trong khi những bản distro khác được duy trì và hỗ trợ bởi một nhà cung cấp thương mại.
+
+
+1.2.Kể tên ít nhất 3 Linux distro và một vài thông tin mô tả về các bản distro này.
+*Debian: Là một bản phân phối phi thương mại và là một trong những bản phân phối ra đời sớm nhất, duy trì bởi một cộng đồng phát triển tình nguyện với một cam kết mạnh mẽ cho nguyên tắc phần mềm miễn phí và quản lý dự án dân chủ.
+*Ubuntu: 
+- Do công ty Canonical phân phối chỉ mới xuất hiện vào quý 3/2004 và không lâu sau đó HĐH này đã trở nên phổ biến, uy tín về chất lượng và dễ dàng sử dụng.
+- Dựa trên hệ thống quản lý gói mạnh mẽ APT của Debian, nhắm đến đối tượng người dùng đầu cuối, nhỏ gọn chỉ với 1 đĩa cài đặt. Người dùng Ubuntu có thể cảm nhận được sự tự do, tùy biến cao trong sử dụng, quản lý hệ thống.
+- Theo thống kê của trang Distrowatch, cho đến hiện nay Ubuntu là distro phổ biến nhất với khoảng hơn 2.000 lượt người truy cập/ngày.
+- Cứ 6 tháng, Ubuntu sẽ ra bản phát hành mới, còn với các phiên bản Long Term Support (LTS) thì việc cập nhật trình bảo mật sẽ từ 3 đến 5 năm.
+		*Fedora, một bản phân phối cộng đồng được đỡ đầu bởi một công ty của Mỹ, 			Red Hat. nó được tạo ra nhằm kiểm thử các công nghệ cho một bản phân phối 			thương mại khác của Red Hat, nơi mà các phần mềm nguồn mở mới được tạo 			lập, phát triển và kiểm thử trong môi trường cộng đồng trước khi được đưa vào 			Red Hat Enterprise Linux.
+		* Red Hat Enterprise Linux (RHEL), một phát sinh của Fedora, duy trì và hỗ trợ 			thương mại bởi Red Hat. Nó tìm cách cung cấp các thử nghiệm, an toàn, ổn định 		cho các máy chủ và máy trạm Linux hỗ trợ cho các doanh nghiệp 
+*CentOS, một bản phân phối bắt nguồn từ mã nguồn tương tự được sử dụng 	bởi Red Hat, duy trì bởi một cộng đồng tình nguyện tận tâm của các nhà phát 	triển với cả hai phiên bản 100% tương thích với Red Hat và một phiên bản 	nâng cấp không phải luôn tương thích ngược 100%.
+2. Cài đặt CentOS
+Thực hiện cài đặt CentOS Stream 9 vào máy tính cá nhân (hoặc máy ảo) của bạn. Trong quá trình cài đặt:
+-Đặt mật khẩu cho tài khoản root. (chụp hình minh hoạ).
+
+
+
+
+-Tạo một tài khoản có tên đăng nhập (User name) là mã số sinh viên, tên đầy đủ (Full name) là tên của sinh viên. Cấp quyền quản trị cho tài khoản (Make this user administrator). (chụp hình minh hoạ).
+
+-Sau khi hoàn thành cài đặt, chụp màn hình đăng nhập có chứa login name để chứng tỏ hoàn thành việc cài đặt.
+
+3.Shell và lệnh Linux cơ bản
+Tìm hiểu và thực hiện các yêu cầu sau:
+3.1.Shell là gì? Kể tên một số shell trong Linux. Làm sao để biết shell nào đang được sử dụng bởi Linux? 
+	- Shell là gì: Shell là một chương trình cung cấp giao diện giao tiếp giữa người dùng và 	hệ điều hành (OS). Hệ điều hành khởi động một shell cho mỗi người dùng khi người 	dùng đăng nhập hoặc mở một cửa sổ terminal hoặc console.
+	- Kể tên một số shell trong Linux:
+		+ Bourne Shell: đường dẫn /bin/sh
+		+ C Shell: đường dẫn /bin/csh
+		+ Bourne Again Shell: /bin/bash
+	- Làm sao để biết shell nào đang được sử dụng bởi Linux: sử dụng lệnh echo $SHELL
+	
+
+3.2.Để tìm kiếm thông tin hướng dẫn về một lệnh hoặc tiện ích nào đó trong Linux, ta có thể sử dụng những câu lệnh nào? Cho ví dụ (chụp hình minh hoạ).
+Sử dụng lệnh man
+ví dụ man ls: để xem hướng dẫn lệnh ls
+
+
+Sử dụng lệnh --help
+Ví dụ: ls --help
+
+
+3.3.Cho biết công dụng của lệnh pwd và cd. Cho ví dụ (chụp hình minh hoạ).
+- Lệnh pwd cho biết đường dẫn thư mục làm việc hiện hành.
+
+- Lệnh cd để di chuyển đến thư mục được chỉ định.
+
+3.4.Cho biết công dụng của lệnh ls và vài tùy chọn của nó.  Cho ví dụ (chụp hình minh hoạ).
+- ls dùng để liệt kê tệp và các thư mục tại nơi làm việc hiện hành hoặc thư mục được chỉ định ví dụ: ls / liệt kê các tệp và thư mục có trong thư mục root
+
+- Một số tùy chọn của lệnh ls
++ Tùy chọn -a ví dụ ls -a: liệt kê tất cả các thư mục và tập tin tại thư mục hiện hành không bỏ qua các tập tin và thư mục bắt đầu bằng dấu ‘.’ .
+
++ Tùy chọn -l liệt kê các tập tin và thư mục theo hàng dọc và các quyền của người dùng và nhóm người dùng ví dụ ls -l:
+
+
+
+
+
+
+
+
+
+
+
+
+
++ Tùy chọn -la kế hợp giữa tùy chọn -l và -a:
+ví dụ: ls -la:
+
+
+3.5.Dùng công cụ gedit để tạo một tập tin có tên thoduyen với nội dung là 8 câu đầu bài thơ Thơ Duyên của Xuân Diệu (chụp hình minh hoạ).
+Sử dụng lệnh: gedit thoduyen
+
+Nhập nội dung 8 câu đầu của bài Thơ Duyên:
+
+Sau đó lưu và thoát.
+3.6.Cho biết công dụng của lệnh cat, more, less, head và tail. Cho ví dụ (chụp hình minh hoạ).
+
+
+
+Lệnh cat: in nội dung các file đã được chọn ra màn hình:
+
+
+Lệnh more: in nội dung file ra màn hình cho phép duy chuyển lên duy chuyển xuống
+Ví dụ lệnh: more thoduyen
+
+Lệnh less tương tự lệnh moore: 
+ví dụ less thoduyen
+
+
+
+Lệnh head: chỉ hiển thị mấy dòng đầu của tập tin:
+Ví dụ head thoduyen -n 3: chỉ hiển thị 3 dòng đầu:
+
+Lệnh tail: chỉ hiện thị mấy dòng sau của tập tin:
+Ví dụ: tail thoduyen -n 3: chỉ hiển thị 3 dòng cuối:
+
+
+
+
+3.7.Cho biết công dụng của lệnh grep. Cho ví dụ (chụp hình minh hoạ).
+Lệnh grep tìm từ khóa trong một tập tin: vd: grep “thơ” thoduyen
+
+3.8.Cho biết công dụng của lệnh cp và mv. Cho ví dụ (chụp hình minh hoạ).
+Lệnh cp cho phép copy một tập tin hoặc thư mục
+Ví dụ copy tập tin:
+
+Ví dụ copy thư mục:
+
+Lệnh mv cho phép duy chuyển tập tin hoạc thư mục:
+Ví dụ duy chuyển tập tin:
+mv test2 Public
+
+3.9.Cho biết công dụng của lệnh mkdir và rm. Cho ví dụ (chụp hình minh hoạ).
+Lệnh mkdir cho phép tạo một thư mục:
+mkdir MyFolder
+Ví dụ tạo thư mục MyFolder: mkdir MyFolder
+
+Lệnh rm cho phép xóa thư mục hoặc tập tin
+Xóa thư mục: rm -r MyFolder
+
+Xóa tập tin: rm test2
+
+4.RPM, cập nhật và cài đặt các package
+4.1.Các tập tin có phần mở rộng .rpm và .deb có chức năng gì?
+- Các tập tin có phần mở rộng .rpm và .deb là các gói phần mềm được sử dụng để cài đặt, cập nhật và quản lý phần mềm trên các hệ điều hành Linux khác nhau.
+.deb (Debian Package) sử dụng cho các hệ điều hành dựa trên Debian như Ubuntu, Linux Mint, và Debian.
+.rpm Các hệ điều hành dựa trên Red Hat như RHEL (Red Hat Enterprise Linux), CentOS, và Fedora.
+4.2.Thay vì đòi hỏi người dùng phải biết trước đường dẫn download file .rpm khi cài đặt/cập nhật ứng dụng có một lệnh trong RHEL/CentOS cho phép truy xuất đến kho file .rpm, sau đó hệ thống sẽ download file thích hợp về để thực hiện cài đặt/cập nhật. Các lệnh đó là lệnh nào? 
+Có thể sử dụng các lệnh như: sudo yum install <tên gói> hay sudo dnf install <tên gói>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4.3.Cài đặt trình soạn thảo nano (chụp hình minh hoạ, nếu trình soạn thảo nano đã được cài sẵn thì chụp thông báo)
+$sudo dnf install nano
+
+4.4.Cài đặt trình duyệt web thuần văn bản (text-based web browser) lynx. Sau khi cài đặt xong, thực hiện truy cập vào website https://www.ctu.edu.vn/ (chụp hình minh hoạ). 
+$sudo dnf install lynx
+
+Để truy cập web site dùng lệnh: lynx www.ctu.edu.vn
+
+
+4.5.Gỡ bỏ chương trình lynx ra khỏi hệ thống (chụp hình minh hoạ).
+Dùng lệnh: sudo dnf remove lynx -y
+
+4.6.Thêm repository và cài đặt công cụ hỗ trợ lập trình VS Code (chụp hình minh hoạ).
++Thêm Microsoft GPG key
+$ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
++Tạo tập tin repository 
+$ sudo nano /etc/yum.repos.d/vscode.repo
+Nội dung tập tin vscode.repo
+[code]
+name=Visual Studio Code
+baseurl=https://packages.microsoft.com/yumrepos/vscode
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
++ Cập nhật cache của dnf và cài đặt
+$ dnf check-update
+$ sudo dnf install code
+4.7.Lệnh nào thực hiện cập nhật tất cả các ứng dụng trong hệ thống (chụp hình minh hoạ)?
+--- Hết ---
